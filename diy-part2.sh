@@ -13,3 +13,6 @@
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
+sed -i 's/^PKG_VERSION:=.*/PKG_VERSION:=118.0.5993.65-1/' feeds/PWpackages/naiveproxy/Makefile
+sed -i 's/^PKG_HASH:=.*/PKG_HASH:=d97193d82e346ec2f753151cee52d00495e2df7688d60a5b4395b8cd39399734/' feeds/PWpackages/naiveproxy/Makefile
+
