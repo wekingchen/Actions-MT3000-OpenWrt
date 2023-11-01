@@ -165,7 +165,7 @@ jobs:
       with:
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
-        files: $GITHUB_WORKSPACE/openwrt/bin/targets/mediatek/filogic/openwrt-*
+        files: /home/runner/work/Actions-MT3000-OpenWrt/Actions-MT3000-OpenWrt/openwrt/bin/targets/mediatek/filogic/openwrt-*
 
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
