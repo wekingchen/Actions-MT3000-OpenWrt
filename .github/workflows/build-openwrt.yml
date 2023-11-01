@@ -165,7 +165,7 @@ jobs:
       with:
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
-        files: bin/targets/mediatek/filogic/openwrt-*squashfs*
+        files: bin/targets/mediatek/filogic/openwrt-*
 
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
