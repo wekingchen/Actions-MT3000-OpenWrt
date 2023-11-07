@@ -169,7 +169,7 @@ jobs:
         files: /home/runner/work/Actions-MT3000-OpenWrt/Actions-MT3000-OpenWrt/openwrt/bin/targets/mediatek/filogic/openwrt-*
 
     - name: Delete workflow runs
-      uses: GitRML/delete-workflow-runs@main
+      uses: wekingchen/delete-workflow-runs@main
       with:
         retain_days: 1
         keep_minimum_runs: 3
