@@ -10,6 +10,10 @@
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 
+# 恢复lede源码对mt3000的支持
+rm -rf target/linux/mediatek
+wget 'https://github.com/wekingchen/my-file/raw/master/lede/mediatek.zip'  --no-check-certificate && unzip -o mediatek.zip && rm -f mediatek.zip
+
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
