@@ -11,7 +11,7 @@
 #
 
 # 恢复lede源码对mt3000的支持
-rm -rf target/linux/mediatek
+# rm -rf target/linux/mediatek
 wget 'https://github.com/wekingchen/my-file/raw/master/lede/mediatek.zip'  --no-check-certificate && unzip -o mediatek.zip && rm -f mediatek.zip
 
 # Uncomment a feed source
