@@ -27,3 +27,9 @@ rm -rf feeds/packages/multimedia/aliyundrive-webdav
 svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt/aliyundrive-webdav feeds/packages/multimedia/aliyundrive-webdav
 rm -rf feeds/luci/applications/luci-app-aliyundrive-webdav
 svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt/luci-app-aliyundrive-webdav feeds/luci/applications/luci-app-aliyundrive-webdav
+
+# 跟随最新版naiveproxy
+rm -rf feeds/passwall_packages/naiveproxy
+git clone -b v5 https://github.com/sbwml/openwrt_helloworld.git
+cp -r openwrt_helloworld/naiveproxy feeds/passwall_packages
+rm -rf openwrt_helloworld
