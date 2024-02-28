@@ -27,6 +27,8 @@ rm -rf aliyundrive-webdav
 
 # 跟随最新版naiveproxy
 rm -rf feeds/passwall_packages/naiveproxy
+rm -rf feeds/helloworld/naiveproxy
 git clone -b v5 https://github.com/sbwml/openwrt_helloworld.git
 cp -r openwrt_helloworld/naiveproxy feeds/passwall_packages
+cp -r openwrt_helloworld/naiveproxy feeds/helloworld
 rm -rf openwrt_helloworld
