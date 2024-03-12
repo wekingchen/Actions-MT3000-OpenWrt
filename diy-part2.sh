@@ -13,9 +13,11 @@
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
-# 替换luci-theme-argon相关
-# rm -rf feeds/luci/themes/luci-theme-argon
-# git clone https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
+# 修改golang源码以编译xray1.8.8+版本
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
+sed -i '/-linkmode external \\/d' feeds/packages/lang/golang/golang-package.mk
+
 
 # 添加aliyundrive-webdav
 rm -rf feeds/packages/multimedia/aliyundrive-webdav
