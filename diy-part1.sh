@@ -15,7 +15,7 @@
 # wget 'https://github.com/wekingchen/my-file/raw/master/lede/mediatek.zip'  --no-check-certificate && unzip -o mediatek.zip && rm -f mediatek.zip
 
 # Uncomment a feed source
-sed -i "/helloworld/d" "feeds.conf.default"
+#sed -i "/helloworld/d" "feeds.conf.default"
 
 # Add a feed source
 echo "src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main" >> "feeds.conf.default"
