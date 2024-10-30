@@ -13,6 +13,10 @@
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
+# 使用自定义的luci-app-frpc
+rm -rf feeds/luci/applications/luci-app-frpc
+git clone https://github.com/wekingchen/luci-app-frpc feeds/luci/applications/luci-app-frpc
+
 # 修改golang源码以编译xray1.8.8+版本
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
