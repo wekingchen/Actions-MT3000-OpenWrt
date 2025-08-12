@@ -38,14 +38,14 @@ rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 24.x feeds/packages/lang/golang
 sed -i '/-linkmode external \\/d' feeds/packages/lang/golang/golang-package.mk
 
-# 修改frp版本为官网最新v0.62.1 https://github.com/fatedier/frp 格式：https://codeload.github.com/fatedier/frp/tar.gz/v${PKG_VERSION}?
+# 修改frp版本为官网最新v0.64.0 https://github.com/fatedier/frp 格式：https://codeload.github.com/fatedier/frp/tar.gz/v${PKG_VERSION}?
 rm -rf feeds/packages/net/frp
 wget https://github.com/coolsnowwolf/packages/archive/0f7be9fc93d68986c179829d8199824d3183eb60.zip -O OldPackages.zip
 unzip OldPackages.zip
 cp -r packages-0f7be9fc93d68986c179829d8199824d3183eb60/net/frp feeds/packages/net/
 rm -rf OldPackages.zip packages-0f7be9fc93d68986c179829d8199824d3183eb60s
-sed -i 's/PKG_VERSION:=0.53.2/PKG_VERSION:=0.62.1/' feeds/packages/net/frp/Makefile
-sed -i 's/PKG_HASH:=ff2a4f04e7732bc77730304e48f97fdd062be2b142ae34c518ab9b9d7a3b32ec/PKG_HASH:=d0513f1c08f7a6b31f91ddeca64ccdec43726c20d20103de5220055daa04b903/' feeds/packages/net/frp/Makefile
+sed -i 's/PKG_VERSION:=0.53.2/PKG_VERSION:=0.64.0/' feeds/packages/net/frp/Makefile
+sed -i 's/PKG_HASH:=ff2a4f04e7732bc77730304e48f97fdd062be2b142ae34c518ab9b9d7a3b32ec/PKG_HASH:=c755c0aaeec3999cb259a312f3327db205a834abf0beeb6410dcdc818d9719a4/' feeds/packages/net/frp/Makefile
 
 # 添加aliyundrive-webdav
 rm -rf feeds/packages/multimedia/aliyundrive-webdav
