@@ -43,6 +43,12 @@ rm -rf OldPackages.zip packages-0f7be9fc93d68986c179829d8199824d3183eb60s
 sed -i 's/PKG_VERSION:=0.53.2/PKG_VERSION:=0.64.0/' feeds/packages/net/frp/Makefile
 sed -i 's/PKG_HASH:=ff2a4f04e7732bc77730304e48f97fdd062be2b142ae34c518ab9b9d7a3b32ec/PKG_HASH:=c755c0aaeec3999cb259a312f3327db205a834abf0beeb6410dcdc818d9719a4/' feeds/packages/net/frp/Makefile
 
+# 修改luci-app-frpc版本
+rm -rf feeds/luci/applications/luci-app-frpc
+git clone https://github.com/openwrt/luci -b openwrt-24.10 luci0
+cp -r luci0/applications/luci-app-frpc feeds/luci/applications
+rm -rf luci0
+
 # 添加aliyundrive-webdav
 rm -rf feeds/packages/multimedia/aliyundrive-webdav
 rm -rf feeds/luci/applications/luci-app-aliyundrive-webdav
